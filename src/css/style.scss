@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+// color
+$orange : #EA8032;
+$blue : #18498C;
+$blue2 : #002CB9;
+$dark : #00001e;
+$soft : #76A3D2;
+$gradient : linear-gradient(82.21deg, $blue 0%, $orange 100%);
+
+*,*::after,*::before{font-family: 'Poppins', sans-serif;}
+
+// Breakpoint
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+// Utils
+
+/* Extra small devices (phone) */
+@media (max-width: $xs) {
+  /* CSS rules for extra small devices here */
+}
+
+/* Small devices (tablet) */
+@media (min-width: $xs) and (max-width: $sm) {
+  /* CSS rules for small devices here */
+}
+
+/* Medium devices (laptop) */
+@media (min-width: $sm) and (max-width: $md) {
+  /* CSS rules for medium devices here */
+}
+
+/* Large devices (desktop) */
+@media (min-width: $md) and (max-width: $lg) {
+  /* CSS rules for large devices here */
+}
+
+/* Extra large devices (large desktop) */
+@media (min-width: $lg) {
+  /* CSS rules for extra large devices here */
+}
+
+main{
+    overflow-x: hidden !important;
+}
+
+.lc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    &-1{
+        -webkit-line-clamp: 1;
+    }
+    &-2{
+        -webkit-line-clamp: 2;
+    }
+    &-3{
+        -webkit-line-clamp: 3;
+    }
+    &-4{
+        -webkit-line-clamp: 4;
+    }
+}
+
+h1,h2,h3,h4,h5,h6,.font-dm{
+    font-family: 'Poppins', sans-serif;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+}
+h1{
+    font-size: 85px;
+    /* Extra small devices (phone) */
+    @media (max-width: $xs) {
+        font-size: 40px;
+    }
+    
+    /* Small devices (tablet) */
+    @media (min-width: $xs) and (max-width: $sm) {
+        font-size: 40px;
+    }
+    
+    /* Medium devices (laptop) */
+    @media (min-width: $sm) and (max-width: $md) {
+        font-size: 60px;
+    }
+    
+    /* Large devices (desktop) */
+    @media (min-width: $md) and (max-width: $lg) {
+        font-size: 70px;
+    }
+}
+
+h2{
+    font-size: 52px;
+    font-weight: bold;
+
+    /* Medium devices (laptop) */
+    @media (min-width: $sm) and (max-width: $md) {
+        font-size: 32px;
+    }
+    
+    /* Large devices (desktop) */
+    @media (min-width: $md) and (max-width: $lg) {
+        font-size: 42px;
+    }
+}
+
+.gradient{
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bg-gradient{
+    color: $gradient;
+}
+
+//div hr
+.dividen{
+    display: block;
+    border: none;
+    width: 2em;
+    height: 10px;
+    background-color: $orange;
+    opacity: 1;
+}
+
+// icon
+.iconify{
+    color: currentColor;
+    width: 40px;
+    height: 40px;
+}
+
+.text-orange{
+    color: $orange;
+}
+
+.text-soft{
+    color: $soft;
+}
+//Components
+
+//Menu
+.nav{
+    background-color: $dark;
+    padding: 1em 1.5em;
+    .nav-box{
+        display: flex;
+        align-items: center;
+        gap: 1.7em;
+        
+        /* Medium devices (laptop) */
+        @media (max-width: $md) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            flex-direction: column;
+            align-items: start;
+            background: $dark;
+            width: 100%;
+            max-width: 20em;
+            padding: 2em;
+            height: 100vh;
+            z-index: 100;
+            transform:translateX(100%);
+            transition: all ease-in-out 300ms;
+            &.active{transform: translateX(0);transition: all ease-in-out 300ms;}
+
+            .nav-close{
+                margin-left: auto;
+                padding: 1em !important;
+                .iconify{
+                    width: 1.5em;
+                    height: 1.5em;
+                }
+            }
+        }
+
+    }
+    .menu{
+        color:white;
+        text-decoration: none;
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 0px 0.6em;
+        &.active::before {
+            content: '';
+            margin-bottom: -1.2em;
+            position: absolute;
+            bottom:0;
+            width: 100%;
+            background: $gradient;
+            height: 7px;
+        }
+
+        @media (max-width: $md) {
+            &.active::before{
+                margin-bottom: -0.6em;
+            }
+        }
+    }
+}
+
+//Button
+.btn-ki89-prm{
+    padding: 1em 1.5em;
+    border-radius: 35px 0px 35px 35px;
+    background: $gradient;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+        border-radius: 35px;
+        color: white;
+        transition: all ease-in-out 300ms;
+    }
+}
+
+.btn.btn-ki89-arrow{
+    color: white;
+    &:hover{
+        background: $orange;
+        color: white;
+        border-color: $orange;
+        border-radius: 20px;
+    }
+}
+
+.btn-ki89-warning{
+    padding: 0.7em 1.7em;
+    background: $orange;
+    color: white;
+    border-radius: 20px;
+    &:hover{
+        background: $orange;
+        color: white;
+    }
+}
+//Hero
+.hero{
+    background: $dark;
+    .hero-card{
+        color: white;
+        h1{
+            font-size: 160px;
+            font-weight: bold;
+            /* Extra small devices (phone) */
+            @media (max-width: $xs) {
+                font-size: 62px;
+            }
+            
+            /* Small devices (tablet) */
+            @media (min-width: $xs) and (max-width: $sm) {
+                font-size: 68px;
+            }
+            
+            /* Medium devices (laptop) */
+            @media (min-width: $sm) and (max-width: $md) {
+                font-size: 88px;
+            }
+            
+            /* Large devices (desktop) */
+            @media (min-width: $md) and (max-width: $lg) {
+                font-size: 110px;
+            }
+        }
+        p{color: $soft;
+            font-size: 27px;
+            /* Extra small devices (phone) */
+            @media (max-width: $xs) {
+                font-size: 24px;
+            }
+            
+            /* Small devices (tablet) */
+            @media (min-width: $xs) and (max-width: $sm) {
+                font-size: 24px;
+            }
+            
+            /* Medium devices (laptop) */
+            @media (min-width: $sm) and (max-width: $md) {
+                font-size: 24px;
+            }
+            
+            /* Large devices (desktop) */
+            @media (min-width: $md) and (max-width: $lg) {
+                font-size: 24px;
+            }
+        }
+    }
+    img{
+        margin-top: -20em;
+        /* Extra small devices (phone) */
+        @media (max-width: $xs) {
+            margin-top: -5em;
+        }
+        
+        /* Small devices (tablet) */
+        @media (min-width: $xs) and (max-width: $sm) {
+            margin-top: -7em;
+        }
+        
+        /* Medium devices (laptop) */
+        @media (min-width: $sm) and (max-width: $md) {
+            margin-top: -10em;
+        }
+        
+        /* Large devices (desktop) */
+        @media (min-width: $md) and (max-width: $lg) {
+            margin-top: -14em;
+        }
+    }
+}
+
+.service{
+    background: linear-gradient(179.97deg, #00001E 0.03%, #141639 22.41%, #002CB9 99.97%);
+    .title{
+        color: white;
+        h2{font-weight: 600;
+            font-size: 52px;    
+        }
+        p{margin-bottom: 0px; font-size: 24px; color: $soft;}
+    }
+    &-card{
+        background: $dark;
+        color: white;
+        padding: 2em;;
+        border-radius: 35px;
+        display: flex;
+        align-items: flex-end;
+        >div{padding-top:7em;}
+        img{height: 2.5em;display: block;object-fit: contain;object-position: left;margin-bottom: 1em;}
+        p{color: $soft;}
+
+        &:hover{
+            background: $gradient;
+            p{color:rgba(255, 255, 255, 0.719)}
+        }
+    }
+}
+
+.project{
+    background: $blue2;
+
+    .btn-project{
+        padding: 0.7em 1.5em;
+        background: #ffffff50;
+        color: white;
+        border: none;
+        font-weight: 500;
+        &:hover,&.active{
+            background: white;
+            color: $blue2;
+        }
+    }
+
+    .project-card{
+        border-radius: 35px;
+        overflow: hidden;
+        
+        .content{
+            padding: 2em;
+            background: linear-gradient(90deg, #010120 48.32%, rgba(1, 1, 32, 0.58) 75.81%, rgba(2, 2, 33, 0) 101.43%);
+            
+            >div{max-width: 40em;}
+        }
+    }
+
+    #project-dots{
+        .owl-dot{
+            border: 0;
+            outline: 0;
+            height: 10px;
+            width: 10px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 0px;
+            &.active{width: 40px;}
+        }
+    }
+}
+
+.articles{
+    background: $dark;
+    .transition{
+        background:$dark;
+        color: $dark;
+        width: 100%;
+    }
+    .title{
+        margin-top: -15em;
+        /* Extra small devices (phone) */
+        @media (max-width: $xs) {
+            margin-top: -3em;
+        }
+        
+        /* Small devices (tablet) */
+        @media (min-width: $xs) and (max-width: $sm) {
+            margin-top: -7em;
+        }
+        
+        /* Medium devices (laptop) */
+        @media (min-width: $sm) and (max-width: $md) {
+            margin-top: -10em;
+        }
+        
+        /* Large devices (desktop) */
+        @media (min-width: $md) and (max-width: $lg) {
+            margin-top: -14em;
+        }
+    }
+
+    &-card{
+        &.featured,&.featured:hover{
+            background: $dark;
+            padding: 0px;
+            >img{
+                border-radius: 25px;
+            }
+        }
+
+        padding: 1em;
+        background: #ffffff1e;
+        border-radius: 25px;
+        margin-bottom: 1em;
+
+        &:hover{
+            background: #fff;
+            color: $dark;
+        }
+        >img{width: 10em;border-radius: 15px;}
+    }
+}
+
+.client{
+    background: $dark;
+    &-box{
+        background: white;
+        padding: 1em;
+        border-radius: 35px 0px 35px 35px;
+    }
+    .client-carousel img{
+        height: 3em;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+footer{
+    .widget{
+        padding: 3em 0px;
+        background: #00123a;
+        .foot-menu{
+            list-style: none;
+            color: white;
+            >li{
+                padding-bottom: 1em;
+
+                a{
+                    text-decoration: none;
+                    color: $soft;
+                }
+            }
+        }
+        .socmed{
+            list-style: none;
+            >li>a{
+                padding: 0.8em;
+                background: $orange;
+                color: white;
+                border-radius: 25px 0px 25px 25px;
+                >.iconify{width:1.5em;height:1.5em;}
+            }
+        }
+    }
+    .credit{background: $dark;
+        padding: 1.5em 0px;
+        color: white; 
+    }
+}

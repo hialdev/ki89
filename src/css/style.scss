@@ -9,6 +9,7 @@ $soft : #76A3D2;
 $gradient : linear-gradient(82.21deg, $blue 0%, $orange 100%);
 
 *,*::after,*::before{font-family: 'Poppins', sans-serif;}
+body{color: white;background: $dark;}
 
 // Breakpoint
 $xs: 576px;
@@ -368,6 +369,7 @@ h2{
         p{margin-bottom: 0px; font-size: 24px; color: $soft;}
     }
     &-card{
+        text-decoration: none !important;
         background: $dark;
         color: white;
         padding: 2em;;
@@ -379,6 +381,7 @@ h2{
         p{color: $soft;}
 
         &:hover{
+            color: white;
             background: $gradient;
             p{color:rgba(255, 255, 255, 0.719)}
         }

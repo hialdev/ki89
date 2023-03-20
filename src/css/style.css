@@ -3,6 +3,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  color: white;
+  background: #00001e;
+}
+
 /* Extra small devices (phone) */
 @media (max-width: 576px) {
   /* CSS rules for extra small devices here */
@@ -380,6 +385,7 @@ h2 {
   color: #76A3D2;
 }
 .service-card {
+  text-decoration: none !important;
   background: #00001e;
   color: white;
   padding: 2em;
@@ -403,6 +409,7 @@ h2 {
   color: #76A3D2;
 }
 .service-card:hover {
+  color: white;
   background: linear-gradient(82.21deg, #18498C 0%, #EA8032 100%);
 }
 .service-card:hover p {

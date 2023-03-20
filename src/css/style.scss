@@ -142,6 +142,15 @@ h2{
 .text-soft{
     color: $soft;
 }
+
+.content{
+    img{
+        width: 100%;
+        border-radius: 25px;
+        display: block;
+        margin: 2em 0px;
+    }
+}
 //Components
 
 //Menu
@@ -245,6 +254,35 @@ h2{
                 margin-bottom: -0.6em;
             }
         }
+    }
+}
+
+//input
+input,input:active,input:focus,textarea{
+    background: #00123a !important;
+    border: none !important;
+    outline: none !important;
+    color: white !important;
+    padding: 0.7em 1em !important;
+    border-radius: 25px !important;
+}
+
+//search
+.search{
+    >input,>input:active,>input:focus{
+        background: #00123a;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 0.7em 1em;
+        border-radius: 99px;
+    }
+    .btn-search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.3em;
+        color: white;
     }
 }
 
@@ -388,7 +426,8 @@ h2{
     }
 }
 
-.project{
+.project2{background: transparent !important;}
+.project,.project2{
     background: $blue2;
 
     .btn-project{
@@ -468,8 +507,10 @@ h2{
             }
         }
 
+        text-decoration: none;
+        color: white;
         padding: 1em;
-        background: #ffffff1e;
+        background: #00123a;
         border-radius: 25px;
         margin-bottom: 1em;
 

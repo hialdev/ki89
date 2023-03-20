@@ -134,6 +134,13 @@ h2 {
   color: #76A3D2;
 }
 
+.content img {
+  width: 100%;
+  border-radius: 25px;
+  display: block;
+  margin: 2em 0px;
+}
+
 .nav {
   background-color: #00001e;
   padding: 1em 1.5em;
@@ -241,6 +248,31 @@ h2 {
   .nav .menu.active::before {
     margin-bottom: -0.6em;
   }
+}
+
+input, input:active, input:focus, textarea {
+  background: #00123a !important;
+  border: none !important;
+  outline: none !important;
+  color: white !important;
+  padding: 0.7em 1em !important;
+  border-radius: 25px !important;
+}
+
+.search > input, .search > input:active, .search > input:focus {
+  background: #00123a;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.7em 1em;
+  border-radius: 99px;
+}
+.search .btn-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em;
+  color: white;
 }
 
 .btn-ki89-prm {
@@ -416,32 +448,36 @@ h2 {
   color: rgba(255, 255, 255, 0.719);
 }
 
-.project {
+.project2 {
+  background: transparent !important;
+}
+
+.project, .project2 {
   background: #002CB9;
 }
-.project .btn-project {
+.project .btn-project, .project2 .btn-project {
   padding: 0.7em 1.5em;
   background: rgba(255, 255, 255, 0.3137254902);
   color: white;
   border: none;
   font-weight: 500;
 }
-.project .btn-project:hover, .project .btn-project.active {
+.project .btn-project:hover, .project .btn-project.active, .project2 .btn-project:hover, .project2 .btn-project.active {
   background: white;
   color: #002CB9;
 }
-.project .project-card {
+.project .project-card, .project2 .project-card {
   border-radius: 35px;
   overflow: hidden;
 }
-.project .project-card .content {
+.project .project-card .content, .project2 .project-card .content {
   padding: 2em;
   background: linear-gradient(90deg, #010120 48.32%, rgba(1, 1, 32, 0.58) 75.81%, rgba(2, 2, 33, 0) 101.43%);
 }
-.project .project-card .content > div {
+.project .project-card .content > div, .project2 .project-card .content > div {
   max-width: 40em;
 }
-.project #project-dots .owl-dot {
+.project #project-dots .owl-dot, .project2 #project-dots .owl-dot {
   border: 0;
   outline: 0;
   height: 10px;
@@ -450,7 +486,7 @@ h2 {
   border-radius: 20px;
   padding: 0px;
 }
-.project #project-dots .owl-dot.active {
+.project #project-dots .owl-dot.active, .project2 #project-dots .owl-dot.active {
   width: 40px;
 }
 
@@ -490,8 +526,10 @@ h2 {
   }
 }
 .articles-card {
+  text-decoration: none;
+  color: white;
   padding: 1em;
-  background: rgba(255, 255, 255, 0.1176470588);
+  background: #00123a;
   border-radius: 25px;
   margin-bottom: 1em;
 }

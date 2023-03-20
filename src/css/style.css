@@ -60,7 +60,7 @@ h1 {
 }
 @media (max-width: 576px) {
   h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
@@ -132,6 +132,52 @@ h2 {
 .nav {
   background-color: #00001e;
   padding: 1em 1.5em;
+  /* Extra small devices (phone) */
+  /* Small devices (tablet) */
+}
+@media (max-width: 576px) {
+  .nav {
+    padding: 0.7em;
+  }
+  .nav > a > img {
+    max-height: 3em;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .nav {
+    padding: 0.7em;
+  }
+  .nav > a > img {
+    max-height: 3em;
+  }
+}
+.nav .nav-open {
+  /* Small devices (tablet) */
+}
+@media (max-width: 576px) {
+  .nav .nav-open {
+    padding: 0.5em !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .nav .nav-open {
+    padding: 0.7em !important;
+  }
+}
+.nav .nav-open .iconify {
+  /* Small devices (tablet) */
+}
+@media (max-width: 576px) {
+  .nav .nav-open .iconify {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .nav .nav-open .iconify {
+    width: 25px !important;
+    height: 25px !important;
+  }
 }
 .nav .nav-box {
   display: flex;
@@ -244,7 +290,7 @@ h2 {
 }
 @media (max-width: 576px) {
   .hero .hero-card h1 {
-    font-size: 62px;
+    font-size: 50px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
@@ -456,6 +502,34 @@ h2 {
 .articles-card > img {
   width: 10em;
   border-radius: 15px;
+  /* Extra small devices (phone) */
+  /* Small devices (tablet) */
+}
+@media (max-width: 576px) {
+  .articles-card > img {
+    width: 7em;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .articles-card > img {
+    width: 7em;
+  }
+}
+.articles-card h4 {
+  /* Extra small devices (phone) */
+  /* Small devices (tablet) */
+}
+@media (max-width: 576px) {
+  .articles-card h4 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .articles-card h4 {
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 .client {

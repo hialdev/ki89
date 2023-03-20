@@ -74,7 +74,7 @@ h1{
     font-size: 85px;
     /* Extra small devices (phone) */
     @media (max-width: $xs) {
-        font-size: 40px;
+        font-size: 30px;
     }
     
     /* Small devices (tablet) */
@@ -147,6 +147,46 @@ h2{
 .nav{
     background-color: $dark;
     padding: 1em 1.5em;
+    /* Extra small devices (phone) */
+    @media (max-width: $xs) {
+        padding: 0.7em;
+
+        >a>img{
+            max-height: 3em;
+        }
+    }
+    
+    /* Small devices (tablet) */
+    @media (min-width: $xs) and (max-width: $sm) {
+        padding: 0.7em;
+        >a>img{
+            max-height: 3em;
+        }
+    }
+
+    .nav-open {
+        @media (max-width: $xs) {
+            padding: 0.5em !important;
+        }
+        
+        /* Small devices (tablet) */
+        @media (min-width: $xs) and (max-width: $sm) {
+            padding: 0.7em !important;
+        }
+        .iconify{
+            @media (max-width: $xs) {
+                width:25px !important;
+                height: 25px !important;
+            }
+            
+            /* Small devices (tablet) */
+            @media (min-width: $xs) and (max-width: $sm) {
+                width:25px !important;
+                height: 25px !important;
+            } 
+        }
+    }
+
     .nav-box{
         display: flex;
         align-items: center;
@@ -168,13 +208,14 @@ h2{
             transform:translateX(100%);
             transition: all ease-in-out 300ms;
             &.active{transform: translateX(0);transition: all ease-in-out 300ms;}
-
+            
             .nav-close{
                 margin-left: auto;
                 padding: 1em !important;
                 .iconify{
                     width: 1.5em;
                     height: 1.5em;
+                    
                 }
             }
         }
@@ -252,7 +293,7 @@ h2{
             font-weight: bold;
             /* Extra small devices (phone) */
             @media (max-width: $xs) {
-                font-size: 62px;
+                font-size: 50px;
             }
             
             /* Small devices (tablet) */
@@ -433,7 +474,30 @@ h2{
             background: #fff;
             color: $dark;
         }
-        >img{width: 10em;border-radius: 15px;}
+        >img{width: 10em;border-radius: 15px;
+            /* Extra small devices (phone) */
+            @media (max-width: $xs) {
+                width: 7em;
+            }
+            
+            /* Small devices (tablet) */
+            @media (min-width: $xs) and (max-width: $sm) {
+                width: 7em;
+            }
+        }
+        h4{
+            /* Extra small devices (phone) */
+            @media (max-width: $xs) {
+                font-size: 16px;
+                font-weight: 400;
+            }
+            
+            /* Small devices (tablet) */
+            @media (min-width: $xs) and (max-width: $sm) {
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
     }
 }
 

@@ -4,7 +4,7 @@
 }
 
 body {
-  color: white;
+  color: rgb(241, 241, 241);
   background: #00001e;
 }
 
@@ -86,7 +86,6 @@ h1 {
 
 h2 {
   font-size: 52px;
-  font-weight: bold;
   /* Medium devices (laptop) */
   /* Large devices (desktop) */
 }
@@ -102,13 +101,13 @@ h2 {
 }
 
 .gradient {
-  background: linear-gradient(82.21deg, #18498C 0%, #EA8032 100%);
+  background: linear-gradient(82.21deg, #002CB9 0%, #EA8032 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-gradient {
-  color: linear-gradient(82.21deg, #18498C 0%, #EA8032 100%);
+  color: linear-gradient(82.21deg, #002CB9 0%, #EA8032 100%);
 }
 
 .dividen {
@@ -139,6 +138,11 @@ h2 {
   border-radius: 25px;
   display: block;
   margin: 2em 0px;
+}
+.content h2, .content h3, .content h4 {
+  background: linear-gradient(82.21deg, #002CB9 0%, #EA8032 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav {
@@ -241,7 +245,7 @@ h2 {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(82.21deg, #18498C 0%, #EA8032 100%);
+  background: linear-gradient(82.21deg, #002CB9 0%, #EA8032 100%);
   height: 7px;
 }
 @media (max-width: 992px) {
@@ -278,9 +282,11 @@ input, input:active, input:focus, textarea {
 .btn-ki89-prm {
   padding: 1em 1.5em;
   border-radius: 35px 0px 35px 35px;
-  background: linear-gradient(82.21deg, #18498C 0%, #EA8032 100%);
+  background: linear-gradient(82.21deg, #002CB9 0%, #EA8032 100%);
   color: white;
   font-weight: 500;
+  outline: none;
+  border: none;
   text-decoration: none;
   cursor: pointer;
 }
@@ -309,6 +315,31 @@ input, input:active, input:focus, textarea {
 .btn-ki89-warning:hover {
   background: #EA8032;
   color: white;
+}
+
+.sidebar-ki89 {
+  padding: 1em;
+  border-radius: 25px;
+  background: #00123a;
+}
+.sidebar-ki89 .sidebar-service {
+  padding: 0.5em;
+  background: #00001e;
+  border-radius: 15px;
+  margin-bottom: 1em;
+}
+.sidebar-ki89 .sidebar-service:hover .iconify {
+  color: #EA8032;
+}
+.sidebar-ki89 .sidebar-project p {
+  color: white;
+}
+.sidebar-ki89 .sidebar-project img {
+  width: 100%;
+  max-height: 8em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
 }
 
 .hero {
@@ -442,7 +473,7 @@ input, input:active, input:focus, textarea {
 }
 .service-card:hover {
   color: white;
-  background: linear-gradient(82.21deg, #18498C 0%, #EA8032 100%);
+  background: linear-gradient(82.21deg, #002CB9 0%, #EA8032 100%);
 }
 .service-card:hover p {
   color: rgba(255, 255, 255, 0.719);
@@ -450,6 +481,10 @@ input, input:active, input:focus, textarea {
 
 .project2 {
   background: transparent !important;
+}
+
+.project-card h3 {
+  -webkit-text-fill-color: #fff;
 }
 
 .project, .project2 {
@@ -488,6 +523,15 @@ input, input:active, input:focus, textarea {
 }
 .project #project-dots .owl-dot.active, .project2 #project-dots .owl-dot.active {
   width: 40px;
+}
+
+.project-hero {
+  display: block;
+  width: 100%;
+  max-height: 30em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
 }
 
 .articles {
